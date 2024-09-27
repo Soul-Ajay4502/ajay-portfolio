@@ -6,7 +6,9 @@ import { Flex } from "../style/StyledElements";
 
 function PortFolio() {
     return (
-        <Flex>
+        <Flex 
+        justifyContent='center'
+        >
             {/* <ProfilePage /> */}
             <TabPage />
         </Flex>

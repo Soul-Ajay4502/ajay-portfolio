@@ -10,7 +10,7 @@ const Tabs = ({ tabs }) => {
   const { themeStyles } = useTheme();
 
   return (
-    <Div width='100%' px='9'>
+    <Div width='100%'>
       <Flex width='100%' justifyContent='right'>
         <Flex
           width='30%'

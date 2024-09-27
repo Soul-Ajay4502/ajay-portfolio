@@ -1,7 +1,6 @@
 import React from "react";
 import { Div, Flex } from "../style/StyledElements";
-import { Runner, AnimePill, ArrowedUL, ScrollArea, } from '../style/StyledComponents'
-import './Header.css'
+import './componentsStyles/Header.css'
 
 
 const Header = ({ themeToggler,...rest }) => {
@@ -9,20 +8,22 @@ const Header = ({ themeToggler,...rest }) => {
     return (
         <Flex
             width='80%'
-            p='6'
+            height='40px'
+            // p='6'
             borderRadius='10px'
+            textAlign='center'
             className="glass-container"
             justifyContent='space-around'
             {...rest}
         >
-            <Div >
-                AJAY
-            </Div>
+            <Flex justifyContent='left' alignItems='center' width='90%'>
+                AJAYRAJ A R
+            </Flex>
             <Div>
             {themeToggler}
             </Div>
-            <Div>
-            </Div>
+            {/* <Div>
+            </Div> */}
         </Flex>
     )
 }

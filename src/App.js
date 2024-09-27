@@ -3,8 +3,9 @@ import React from "react";
 import { useTheme } from "./context/ThemeContext";
 import PortFolio from "./pages";
 import { Div, Flex } from "./style/StyledElements";
-import { Moon } from './assets/icon'
+import { Moon, Sun } from './assets/icon'
 import Header from "./components/Header";
+import TechStacsRunner from "./components/TechStacsRunner";
 
 function App() {
   const { theme, toggleTheme, themeStyles } = useTheme();
@@ -21,29 +22,43 @@ function App() {
         // justifyContent: "center"
       }}
     >
-      <Div
-        position='fixed'
-        width='100%' >
+      <Div >
+        <Div
+          position='fixed'
+          width='100%'
+          zIndex='10'
+        >
+          <Div
+            width='100%'
+            bg={themeStyles.backgroundColor}
+            height='10px'
+          />
+          <Flex
+            // position='fixed'
+            width='100%'
+            justifyContent='center'
+            top='2'
+          >
+            <Header themeToggler={<Div onClick={toggleTheme}>
+              {theme === 'dark' ? <Sun /> : <Moon />}
+              </Div>} 
+              />
+          </Flex>
+        </Div>
         <Div
           width='100%'
-          bg={themeStyles.backgroundColor}
-          height='10px'
-        />
-        <Flex
-          // position='fixed'
-          width='100%'
-          justifyContent='center'
-          top='2'
+          pt='9'
+          position='fixed'
+          className="glass-container-tech"
         >
-          <Header themeToggler={<Div onClick={toggleTheme}>D</Div>} />
-        </Flex>
+          <TechStacsRunner />
+        </Div>
       </Div>
       <Flex
         width='100%'
         justifyContent='right'
-        pt='9'
-      >
-      </Flex>
+        pt='15%'
+      />
       <PortFolio />
     </Div>
   );

@@ -15,14 +15,14 @@ import ContactTab from "../components/tabs/Contact";
 function TabPage() {
   const tabData = [
     { activeTab: <HomeActive />, inActiveTab: <Home />, content: <HomeTab/> },
-    { activeTab: <ResumeActive />, inActiveTab: <Resume />, content:<ResumeTab/> },
+    // { activeTab: <ResumeActive />, inActiveTab: <Resume />, content:<ResumeTab/> },
     { activeTab: <WorkActive />, inActiveTab: <Work />, content: <WorkTab/> },
     { activeTab: <ContactActive />, inActiveTab: <Contact />, content: <ContactTab/> }
   ];
 
   return (
     <Flex 
-    // width='80%' 
+    width='84%' 
     >
       <Tabs tabs={tabData} />
     </Flex>

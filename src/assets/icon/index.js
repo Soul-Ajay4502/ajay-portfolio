@@ -13,7 +13,12 @@ import { ReactComponent as HomeActive } from './HomeActive.svg'
 import { ReactComponent as ResumeActive } from './ResumeActive.svg'
 import { ReactComponent as WorkActive } from './workActive.svg'
 import { ReactComponent as ContactActive } from './contactActive.svg'
-import { ReactComponent as Moon } from './ph_moon.svg'
+import { ReactComponent as Moon } from './moon-svgrepo-com.svg'
+import { ReactComponent as Download } from './download.svg'
+import { ReactComponent as Eye } from './eyewhite.svg'
+import { ReactComponent as Sun } from './sun-svgrepo-com.svg'
+
+
 
 
 
@@ -24,6 +29,7 @@ export {
     GitLogo, LinkedInLogo, TwitterLogo,
     FbLogo, Phone, Mail, Location,
     Home, Resume, Work, Contact,Moon,
-    HomeActive, ResumeActive, WorkActive, ContactActive
+    HomeActive, ResumeActive, WorkActive, ContactActive,
+    Download,Eye,Sun,
 
 };
