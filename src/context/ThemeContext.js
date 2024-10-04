@@ -9,6 +9,8 @@ export const useTheme = () => useContext(ThemeContextToggler);
 
 export const ThemeProviderContext = ({ children }) => {
   const [theme, setTheme] = useState("dark");
+  const [section, setSection] = useState("section1");
+
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -23,10 +25,15 @@ export const ThemeProviderContext = ({ children }) => {
     localStorage.setItem("theme", newTheme); // Persist theme
   };
 
+  const contextCurrentSection = ({section}) => {
+    setSection(section);
+  };
+
+
   const themeStyles = theme === "light" ? lightTheme : darkTheme;
 
   return (
-    <ThemeContextToggler.Provider value={{ theme, toggleTheme, themeStyles }}>
+    <ThemeContextToggler.Provider value={{ theme, toggleTheme, themeStyles,contextCurrentSection,section }}>
       {children}
     </ThemeContextToggler.Provider>
   );

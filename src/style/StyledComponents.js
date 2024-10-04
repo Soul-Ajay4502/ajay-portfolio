@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Button, Div, Ul } from './StyledElements';
-// import DoubleArrowIcon from '../asset/icons/NavDropdownHighIcon.svg';
+import DoubleArrowIcon from '../assets/icon/NavDropdownHighIcon.svg';
 
 const Runner = styled(Div)`
     white-space: nowrap;
@@ -55,43 +55,45 @@ const ScrollArea = styled(Div)`
     }
 `;
 
-// const NavItem = styled(Div)`
-//     padding: 16px 12px;
-//     padding-right: 45px;
-//     position: relative;
-//     cursor: pointer;
-//     ::after {
-//         content: url(${DoubleArrowIcon});
-//         position: absolute;
-//         display: inline-flex;
-//         right: 0;
-//         visibility: hidden;
-//         align-items: center;
-//         justify-content: end;
-//         height: 100%;
-//         width: 100%;
-//         top: 0;
-//         z-index: -1;
-//         box-sizing: border-box;
-//         padding-right: 10px;
-//     }
-//     &:hover {
-//         ::after {
-//             visibility: visible;
-//             border-radius: 7px;
-//             border: 1px solid rgba(255, 255, 255, 0.06);
-//             background: linear-gradient(
-//                 94deg,
-//                 rgba(33, 77, 162, 0.17) 0%,
-//                 #212831 79.56%
-//             );
-//             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
-//         }
-//         background: linear-gradient(180deg, #6d99e5 0%, #9962e6 100%);
-//         background-clip: text;
-//         -webkit-background-clip: text;
-//         -webkit-text-fill-color: transparent;
-//     }
-// `;
+const NavItem = styled(Div)`
+    padding: 16px 12px;
+    padding-right: 45px;
+    position: relative;
+    cursor: pointer;
+    ::after {
+        content: url(${DoubleArrowIcon});
+        position: absolute;
+        display: inline-flex;
+        right: 0;
+        visibility: hidden;
+        align-items: center;
+        justify-content: end;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+        box-sizing: border-box;
+        padding-right: 10px;
+    }
+    &:hover {
+        ::after {
+            visibility: visible;
+            border-radius: 7px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: linear-gradient(
+                94deg,
+                rgba(33, 77, 162, 0.17) 0%,
+                #212831 79.56%
+            );
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+        }
+        
+        color:#fff;
+        background: linear-gradient(180deg, #6d99e5 0%, #9962e6 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+    }
+`;
 
-export { Runner, AnimePill, ArrowedUL, ScrollArea };
+export { Runner, AnimePill, ArrowedUL, ScrollArea,NavItem };

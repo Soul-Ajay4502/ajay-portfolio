@@ -1,7 +1,18 @@
 import React from 'react';
-import { Flex } from '../style/StyledElements';
-import { AnimePill } from '../style/StyledComponents';
+import { Button } from '../style/StyledElements';
 import { Download } from '../assets/icon';
+import styled from 'styled-components';
+
+const CTABTN = styled(Button)`
+    border-radius: 10px;
+    background: linear-gradient(167deg, #2299C7 18%, #A7CEFF 57%);
+    color: #222732;
+    font-size: 16px;
+    &:hover {
+        transform: scale(1.01) translate(5px, -2px) skewX(1deg);
+        box-shadow: -3px 3px 1px 0px #888;
+    }
+`;
 
 const PdfDownload = () => {
     const downloadPdf = () => {
@@ -12,20 +23,15 @@ const PdfDownload = () => {
     };
 
     return (
-        <>
-            <AnimePill
-                p='2'
-                bg='#35a2f0'
-                borderRadius='10px'
-                textAlign='center'
-                onClick={downloadPdf}
-                justifyContent='center'
-                alignItems='center'
-                width='47%'
-            >
+        <CTABTN
+        ml={{ md: '5', xxl: '7' }}
+        onClick={downloadPdf}
+        py='10px'
+        px={{ xs: '20px', lg: '15px', xl: '20px' }}
+    >
                 <Download /> Resume
-            </AnimePill>
-        </>
+           
+        </CTABTN>
     );
 };
 

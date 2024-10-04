@@ -1,6 +1,5 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import { display, justifyContent, minWidth, overflow } from 'styled-system';
 import { Flex } from '../style/StyledElements';
 
 const Modal = ({ show, onClose, children }) => {
@@ -30,7 +29,7 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        zIndex: 1000,
+        zIndex: 10000,
         width:'36%'
     },
     modal: {

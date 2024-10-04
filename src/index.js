@@ -6,6 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components';
 import theme from './style/theme';
 import { ThemeProviderContext } from "./context/ThemeContext";
+import { Suspense,lazy } from 'react';
+import Loader from './components/loader/Loader';
+const Routing = lazy(() => import('./Routing'));
+
+
 
 
 
@@ -15,7 +20,12 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <ThemeProviderContext>
-      <App />
+        <Suspense fallback={<Loader />}>
+          <Routing />
+          {/* <Toaster /> */}
+          {/* <App /> */}
+        </Suspense>
+        {/* <App /> */}
       </ThemeProviderContext>
     </ThemeProvider>
   </React.StrictMode>

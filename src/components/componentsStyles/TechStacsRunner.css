@@ -1,5 +1,5 @@
 .condainer {
-    margin: 0px 120px;
+    /* margin: 0px 120px; */
     display: flex;
     justify-content: center;
 }
@@ -22,8 +22,8 @@
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
-    width: 70px;
-    height: 70px;
+    width: 80%;
+    height: 80%;
     text-align: center;
     display: flex;
     justify-content: center;  /* Horizontally center */
@@ -40,3 +40,15 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
 }
+
+.tech-glass-container {
+    background: rgba(82, 176, 126, 0) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+    color: #000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }

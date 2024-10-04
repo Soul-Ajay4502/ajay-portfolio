@@ -31,5 +31,4 @@ export {
     Home, Resume, Work, Contact,Moon,
     HomeActive, ResumeActive, WorkActive, ContactActive,
     Download,Eye,Sun,
-
 };

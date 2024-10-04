@@ -14,7 +14,7 @@ const radii = [
 const space = [0, 4, 8, 10, 16, 24, 32, 48, 64, 128, 256];
 
 export const lightTheme = {
-    backgroundColor: "#F2F5F9",
+    backgroundColor: "#F2F5FA",
     bg:'#fff',
     color: "#000000"
   };
