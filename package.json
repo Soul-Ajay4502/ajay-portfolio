@@ -1,6 +1,7 @@
 {
   "name": "ajay-portfolio",
   "version": "0.1.0",
+  "homepage": "https://gitname.github.io/ajay-portfolio",
   "private": true,
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",
@@ -9,7 +10,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "pdf-viewer-reactjs": "^2.2.3",
+    "gh-pages": "^6.1.1",
     "pdfjs-dist": "^4.6.82",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,7 +22,6 @@
     "react-router-dom": "^6.26.2",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
-    "reactjs-pdf-reader": "^1.0.12",
     "styled-components": "^6.1.13",
     "styled-system": "^5.1.5",
     "web-vitals": "^2.1.4"
@@ -30,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
