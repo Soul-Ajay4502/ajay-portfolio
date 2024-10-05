@@ -77,7 +77,7 @@ function ContactDropdown({ isMenuOpened, closeMenu, openMenu, ...rest }) {
         >
             <Span>
                 <Flex {...rest}>
-                    Contact Us
+                    Contact Me
                     <Span ml='3'>
                         <DownArrow />
                     </Span>

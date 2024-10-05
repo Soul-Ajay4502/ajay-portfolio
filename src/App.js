@@ -83,8 +83,8 @@ const App = () => {
   }, []);
 
   const sectionTopPadding = {
-    section1: { md: '140px', sm: '150px', xs: '150px', lg: '200px', xl: '130px', xxl: '250px' },
-    section2: { md: '0', sm: '0', xs: '0', lg: '170px', xl: '100px', xxl: '220px' },
+    section1: { md: '140px', sm: '180px', xs: '255px', lg: '200px', xl: '130px', xxl: '250px' },
+    section2: { md: '0', sm: '0', xs: '150px', lg: '170px', xl: '100px', xxl: '220px' },
     section3: { md: '0', sm: '0', xs: '0', lg: '170px', xl: '100px', xxl: '220px' },
 
   }
