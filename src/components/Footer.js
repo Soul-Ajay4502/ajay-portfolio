@@ -10,7 +10,7 @@ const Footer = ({ ...rest }) => {
 
     return (
         <Flex
-            width='100%'
+            width='99.5%'
             height='100px'
             py='8'
             borderRadius='10px'
