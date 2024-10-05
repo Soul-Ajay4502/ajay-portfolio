@@ -5,7 +5,7 @@ import { Para } from '../style/StyledElements';
 const SplashScreen = () => {
   return (
     <div style={styles.container}>
-      <Para color='#fff' fontFamily='Silkscreen' fontSize='57px' fontWeight='500'> AJAYRAJ A R </Para>
+      <Para color='#fff' fontFamily='Silkscreen' fontSize={{lg:'57px',md:'54px',xs:'43px'}} fontWeight='500'> AJAYRAJ A R </Para>
       <Para color='#fff' fontFamily='Silkscreen' fontSize='17px' py='2' > {'< Full Stack Developer / >'} </Para>
       <Para color='#fff' fontFamily='Silkscreen' textAlign='right' fontSize='12px'> 
         PORTFOLIO

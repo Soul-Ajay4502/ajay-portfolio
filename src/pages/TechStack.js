@@ -56,30 +56,31 @@ function TechStack() {
     },
     {
       id: "2",
-      name: "React Native",
-      desc: "A framework for building native apps using React.",
-      icon: 'reactnative'
-    },
-    {
-      id: "3",
       name: "Node.js",
       desc: "A JavaScript runtime built on Chrome's V8 engine.",
       icon: 'nodejs'
     },
     {
-      id: "4",
+      id: "3",
       name: "MySQL",
       desc: "An open-source relational database management system.",
       img: ["https://via.placeholder.com/300x150"],
       icon: 'mysql'
     },
+    
+    {
+      id: "4",
+      name: "React Native",
+      desc: "A framework for building native apps using React.",
+      icon: 'react'
+    },
     // Add more tech stacks if needed
   ];
 
   return (
-    <Div className="glass-container-tech" style={{ padding: "20px" }}>
+    <Div className="glass-container-tech" px='20px'>
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Main Stack</h2>
-      <Flex style={flexContainerStyle} py='6' >
+      <Flex style={flexContainerStyle} pb='6' >
         {techObject.map((tech) => (
           <TechCard key={tech.id} tech={tech} />
         ))}

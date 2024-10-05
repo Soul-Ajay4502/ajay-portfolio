@@ -1,0 +1,6 @@
+.mode-toggle {
+    cursor: pointer;
+    border: none; 
+    background-color: transparent !important; 
+    margin-left: 10px; 
+}

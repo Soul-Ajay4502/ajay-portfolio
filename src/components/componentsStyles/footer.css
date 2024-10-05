@@ -1,0 +1,15 @@
+.footer-glass-container {
+    background: rgba(38, 87, 97, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(10, 10, 10, 0.3);
+    text-align: center;
+
+    transition: 0.3s;
+  }
+  
+  .footer-glass-container:hover {
+    backdrop-filter: blur(15px);
+    /* Increase blur on hover */
+    -webkit-backdrop-filter: blur(15px);
+  }

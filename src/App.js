@@ -13,14 +13,14 @@ import './App.css'
 const sectionData = [
   { id: 'section1', title: 'Section 1', content: <Hero />, icon: <Div><Div pl='2'><VscAccount /></Div> Hero</Div> },
   { id: 'section2', title: 'Section 2', content: <TechStack />, icon: <Div><Div pl='2'><VscGear /></Div> Tech</Div> },
-  { id: 'section3', title: 'Section 3', content:<Works/> , icon: <Div><Div pl='12px'><VscGithubProject /></Div> Works</Div> }
+  { id: 'section3', title: 'Section 3', content: <Works />, icon: <Div><Div pl='12px'><VscGithubProject /></Div> Works</Div> }
 ];
 
 // Header Component
-const Header = ({ activeSection,theme }) => {
-  const boderBg={
-    light:'#000',
-    dark:'#fff'
+const Header = ({ activeSection, theme }) => {
+  const boderBg = {
+    light: '#000',
+    dark: '#fff'
   }
   return (
     <Flex flexDirection='column' height='300px' justifyContent='space-between'>
@@ -39,7 +39,7 @@ const Header = ({ activeSection,theme }) => {
             {/* {activeSection === section.id?section.icon:section.title} */}
             {section.icon}
           </Link>
-          {activeSection === section.id&&<Div width='50px' height='5px' bg={boderBg[theme]} borderRadius='200px'/>}
+          {activeSection === section.id && <Div width='50px' height='5px' bg={boderBg[theme]} borderRadius='200px' />}
         </Flex>
       ))}
     </Flex>
@@ -50,23 +50,14 @@ const Header = ({ activeSection,theme }) => {
 const App = () => {
 
   const [activeSection, setActiveSection] = useState(sectionData[0].id);
-  const { theme, toggleTheme, themeStyles,section } = useTheme();
-  const [loading, setLoading] = useState(true);
+  const { theme, toggleTheme, themeStyles, section } = useTheme();
   const [sidebarIsOpen, setShowSidebar] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState(window.location.href);
 
 
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
-    
+
     const handleScroll = () => {
       const sections = document.querySelectorAll('.section');
       let currentSection = sectionData[0].id; // Default to the first section
@@ -91,11 +82,13 @@ const App = () => {
     };
   }, []);
 
-  
+  const sectionTopPadding = {
+    section1: { md: '140px', sm: '150px', xs: '150px', lg: '200px', xl: '130px', xxl: '250px' },
+    section2: { md: '0', sm: '0', xs: '0', lg: '170px', xl: '100px', xxl: '220px' },
+    section3: { md: '0', sm: '0', xs: '0', lg: '170px', xl: '100px', xxl: '220px' },
 
-  const closeSidebar = () => {
-    if (sidebarIsOpen) setShowSidebar(false);
-  };
+  }
+
 
   return (
     <>
@@ -107,7 +100,7 @@ const App = () => {
         top='30%'
         display={{ lg: 'block', md: 'none' }}
       >
-        <Header activeSection={activeSection} theme={theme}/>
+        <Header activeSection={activeSection} theme={theme} />
       </Div>
       {/* Content of the page */}
       <div className="content">
@@ -116,10 +109,15 @@ const App = () => {
             key={id}
             id={id}
             className="section"
-            // style={{ height: '750px' }}
-            pt={{ md: '140px', sm: '100px', lg: '100px', xl: '130px', xxl: '100px' }}
+            pt={{
+              md: sectionTopPadding[id].md, 
+              sm: sectionTopPadding[id].sm,
+              xs: sectionTopPadding[id].xs,
+              lg: sectionTopPadding[id].lg,
+              xl: sectionTopPadding[id].xl,
+              xxl: sectionTopPadding[id].xxl
+            }}
           >
-            {/* <h2>{title}</h2> */}
             <>{content}</>
           </Div>
         ))}

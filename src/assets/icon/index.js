@@ -17,7 +17,8 @@ import { ReactComponent as Moon } from './moon-svgrepo-com.svg'
 import { ReactComponent as Download } from './download.svg'
 import { ReactComponent as Eye } from './eyewhite.svg'
 import { ReactComponent as Sun } from './sun-svgrepo-com.svg'
-
+import { ReactComponent as LightMode } from './LightMode.svg'
+import { ReactComponent as DarkMode } from './DakMode.svg'
 
 
 
@@ -30,5 +31,5 @@ export {
     FbLogo, Phone, Mail, Location,
     Home, Resume, Work, Contact,Moon,
     HomeActive, ResumeActive, WorkActive, ContactActive,
-    Download,Eye,Sun,
+    Download,Eye,Sun,LightMode,DarkMode
 };

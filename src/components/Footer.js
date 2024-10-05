@@ -2,6 +2,7 @@ import React from "react";
 import { Div, Flex, Img, Span } from "../style/StyledElements";
 import {ReactComponent as Call} from '../assets/icon/CallPhone.svg'
 import { ReactComponent as Email } from '../assets/icon/SolidEmail.svg';
+import './componentsStyles/footer.css'
 
 
 
@@ -12,10 +13,10 @@ const Footer = ({ ...rest }) => {
             width='100%'
             height='100px'
             py='8'
-            border=' 1px solid rgba(255, 255, 255, 0.3)'
             borderRadius='10px'
             textAlign='center'
             justifyContent='space-around'
+            className="footer-glass-container"
         >
             <Flex 
             // justifyContent='left' alignItems='center' 

@@ -1,19 +1,15 @@
 import { Div, Button, Flex, Link, Span } from '../../style/StyledElements';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../assets/icon/Logo.svg';
-import { ReactComponent as LogoSm } from '../../assets/icon/LogoSm.svg';
 import { ReactComponent as Hamburger } from '../../assets/icon/Hamburger.svg';
 import styled from 'styled-components';
 import { useMediaType } from '../Responsiver';
-// import ProductDropDown from './ProductDropDown';
 import ContactDropdown from './ContactDropdown';
 import { useState } from 'react';
-// import ServicesDropdown from './ServicesDropdown';
 import '../componentsStyles/Nav.css'
 import { useTheme } from '../../context/ThemeContext';
-import Switch from "react-switch";
-import { Download } from '../../assets/icon';
 import PdfDownload from '../pdfDownloader';
+import { DarkMode, LightMode } from '../../assets/icon';
+import './Navbar.css'
 
 
 const CTABTN = styled(Button)`
@@ -51,7 +47,7 @@ function Navbar({ toggleSidebar, closeSidebar }) {
     const [openedMenu, setOpenedMenu] = useState(null);
     const [switchChecked, setSwitchChecked] = useState(false);
 
-    const { themeStyles, toggleTheme } = useTheme()
+    const { themeStyles, toggleTheme,theme } = useTheme()
 
     return (
         <Flex
@@ -92,17 +88,12 @@ function Navbar({ toggleSidebar, closeSidebar }) {
                 </Span>
                 <Div
                     position='absolute'
-                    top={{ lg: '35%', md: '18%' }}
+                    top={{ lg: '23%', md: '-10%' }}
                     right={{ lg: '50%', sm: '43%', md: '48%', xs: '40%' }}
                 >
-                    <Switch
-                        onChange={() => { toggleTheme(); setSwitchChecked(!switchChecked) }}
-                        checked={switchChecked}
-                        checkedIcon={false}
-                        uncheckedIcon={false}
-                        offColor='#E0F6FA'
-                        onColor='#000'
-                    />
+                    <button className="mode-toggle" onClick={toggleTheme}>
+          {theme === 'light' ? <DarkMode width={'40px'} /> : <LightMode width={'40px'} />}
+        </button>
                 </Div>
                 <Div
                     ml='auto'
