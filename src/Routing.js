@@ -21,7 +21,7 @@ function Routing() {
       ) : (
         <Router>
             <Routes>
-                <Route path='/' element={<Layout />}>
+                <Route path='/ajay-portfolio' element={<Layout />}>
                     <Route index element={<App />} />
                 </Route>
             </Routes>
