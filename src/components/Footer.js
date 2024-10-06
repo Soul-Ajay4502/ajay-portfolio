@@ -1,6 +1,6 @@
 import React from "react";
-import { Div, Flex, Img, Span,Para } from "../style/StyledElements";
-import {ReactComponent as Call} from '../assets/icon/CallPhone.svg'
+import { Div, Flex, Img, Span, Para } from "../style/StyledElements";
+import { ReactComponent as Call } from '../assets/icon/CallPhone.svg'
 import { ReactComponent as Email } from '../assets/icon/SolidEmail.svg';
 import './componentsStyles/footer.css'
 
@@ -18,11 +18,12 @@ const Footer = ({ ...rest }) => {
             justifyContent='space-around'
             className="footer-glass-container"
         >
-            <Flex 
+            <Flex
             // justifyContent='left' alignItems='center' 
             // width='40%'
+            fontSize={{xs:'12px',md:'18px'}}
             >
-               Developed by <Para pl='1' fontWeight='500'>  Ajayraj A R</Para> 
+                Developed by <Para pl='1' fontWeight='500'>  Ajayraj A R</Para>
             </Flex>
             <Flex>
                 <a
@@ -40,10 +41,10 @@ const Footer = ({ ...rest }) => {
                     />
                 </a>
 
-               
+
             </Flex>
             <Div >
-            <a
+                <a
                     href='tel:+919633160059'
                     style={{
                         textDecoration: 'none',
@@ -51,7 +52,7 @@ const Footer = ({ ...rest }) => {
                     }}
                 >
                     <Flex as={Flex} alignItems='center'>
-                    <Flex
+                        <Flex
                             //  bg={bg[theme]}
                             borderRadius='100px'
                             p='1px'
@@ -90,7 +91,7 @@ const Footer = ({ ...rest }) => {
                     }}
                 >
                     <Flex as={Flex} alignItems='center'>
-                    <Flex
+                        <Flex
                             //  bg={bg[theme]}
                             borderRadius='100px'
                             px='2px'

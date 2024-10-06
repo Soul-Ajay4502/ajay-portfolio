@@ -6,11 +6,12 @@ import { ReactComponent as Email } from '../../assets/icon/SolidEmail.svg';
 import DropDown from './Dropdown';
 import PdfDownload from '../pdfDownloader';
 import { useTheme } from '../../context/ThemeContext';
+import { justifyContent } from 'styled-system';
 
 function Sidebar({ show, closeSidebar }) {
     const navigate = useNavigate();
     const [openedMenu, setOpenedMenu] = useState(null);
-    const {contextCurrentSection}=useTheme();
+    const { contextCurrentSection } = useTheme();
 
     const toggleMenu = (item) => {
         if (openedMenu === item) {
@@ -28,49 +29,45 @@ function Sidebar({ show, closeSidebar }) {
                 transition: '.15s ease-out',
             }}
         >
-            <Div mt='150px'>
-                <Link smooth to='#section1' onClick={()=>{closeSidebar();contextCurrentSection({section:'section1'})}} {...styles.link}>
-                    Hero
+            <Div 
+            mt='150px'
+            position='relative'
+            >
+                <Div 
+                position='absolute' 
+                top='-115px' 
+                right='21px'
+                fontSize='44px'
+                onClick={closeSidebar}
+                >
+                &times;
+                </Div>
+                <Link smooth to='tel:+919846027693' onClick={() => { closeSidebar(); contextCurrentSection({ section: 'section1' }) }} {...styles.link}>
+                    <Flex alignItems='center'>
+                        <Call />
+                        <Span pl='3'>+91-9846027693</Span>
+                    </Flex>
                 </Link>
-               
-                <Link smooth to='#section2' onClick={()=>{closeSidebar();contextCurrentSection({section:'section2'})}} {...styles.link}>
-                    Tech stack
+
+                <Link smooth to='mailto:rajay5767@gmail.com' onClick={() => { closeSidebar(); contextCurrentSection({ section: 'section2' }) }} {...styles.link}>
+                    <Flex alignItems='center'>
+                        <Email />
+                        <Span pl='3'>rajay5767@gmail.com</Span>
+                    </Flex>
                 </Link>
-                <Link smooth to='#section3' onClick={()=>{closeSidebar();contextCurrentSection({section:'section3'})}} {...styles.link}>
-                    Works
+                <Link smooth to='https://www.linkedin.com/in/ajayraj-a-r' onClick={() => { closeSidebar(); contextCurrentSection({ section: 'section3' }) }} {...styles.link}>
+                    <Flex alignItems='center'>
+                        <Flex
+                            borderRadius='100px'
+                            px='2px'
+                            alignItems='center'
+                        ><Div fontWeight='700' fontSize='20px' color='#fff'>In</Div>
+                        </Flex>
+                        <Span pl='3'>Ajayraj A R</Span>
+                    </Flex>
                 </Link>
-                <DropDown
-                    item='Contact'
-                    toggleMenu={() => toggleMenu('Contact Us')}
-                    isOpen={openedMenu === 'Contact Us'}
-                    options={[
-                        {
-                            width: { sm: '60%' },
-                            onSelect: () =>
-                                (window.location.href = 'tel:+919846027693'),
-                            title: (
-                                <Flex alignItems='center'>
-                                    <Call />
-                                    <Span pl='3'>+91-9846027693</Span>
-                                </Flex>
-                            ),
-                        },
-                        {
-                            width: { sm: '60%' },
-                            onSelect: () =>
-                                (window.location.href =
-                                    'mailto:rajay5767@gmail.com'),
-                            title: (
-                                <Flex alignItems='center'>
-                                    <Email />
-                                    <Span pl='3'>rajay5767@gmail.com</Span>
-                                </Flex>
-                            ),
-                        },
-                    ]}
-                />
             </Div>
-            <PdfDownload/>
+            <PdfDownload />
         </Flex>
     );
 }
@@ -92,6 +89,7 @@ const styles = {
         backgroundColor: '#15171A',
         fontFamily: 'inter',
         overflowY: 'auto',
+        justifyContent:'space-between'
     },
     link: {
         fontSize: { xs: '20px', md: '24px' },

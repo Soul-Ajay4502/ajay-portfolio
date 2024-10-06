@@ -51,10 +51,6 @@ const App = () => {
 
   const [activeSection, setActiveSection] = useState(sectionData[0].id);
   const { theme, toggleTheme, themeStyles, section } = useTheme();
-  const [sidebarIsOpen, setShowSidebar] = useState(false);
-
-
-
 
   useEffect(() => {
 
