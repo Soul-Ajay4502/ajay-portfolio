@@ -1,6 +1,6 @@
 // Works.js
 import React from "react";
-import { Div, Flex, Img, Para } from "../style/StyledElements";
+import { Button, Div, Flex, Img, Para } from "../style/StyledElements";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import amc from '../assets/images/amc.png'
@@ -47,7 +47,7 @@ function WorkCard({ work }) {
             <Flex
                 position='absolute'
                 bottom='0'
-                right={work.liveLink ? '18%' : '35%'}
+                right={work.liveLink ? '15%' : '7%'}
             >
                 {work.liveLink ? <>
                     <a href={work.git} target="_blank" rel="noopener noreferrer">
@@ -69,7 +69,7 @@ function WorkCard({ work }) {
                     </a>
                 </> :
                     <a href={work.git} target="_blank" rel="noopener noreferrer">
-                        <button style={{...buttonStyle, width:'100%',backgroundColor: "#7812b8"}}>
+                        <Button px='100px' style={{...codeButtonStyle, width:'100%',backgroundColor: "#7812b8"}}>
                             <Flex alignItems='center' justifyContent='center'>
                                 <Img
                                     width='20px'
@@ -80,7 +80,7 @@ function WorkCard({ work }) {
                                 />
                                 <Div>Code</Div>
                             </Flex>
-                        </button>
+                        </Button>
                     </a>
                 }
             </Flex>
@@ -117,6 +117,14 @@ const buttonStyle = {
     height: '75%'
 };
 
+const codeButtonStyle = {
+    margin: "8px",
+    color: "#fff",
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+    height: '75%'
+};
 function Works() {
     const workObject = [
         {
@@ -202,7 +210,7 @@ function Works() {
                             }
                         }}
                         infinite
-                        autoPlay
+                        // autoPlay
                         autoPlaySpeed={3000}
                         centerMode
                         slidesToSlide={1}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Div, Flex, Img, Span } from "../style/StyledElements";
+import { Div, Flex, Img, Span,Para } from "../style/StyledElements";
 import {ReactComponent as Call} from '../assets/icon/CallPhone.svg'
 import { ReactComponent as Email } from '../assets/icon/SolidEmail.svg';
 import './componentsStyles/footer.css'
@@ -22,7 +22,7 @@ const Footer = ({ ...rest }) => {
             // justifyContent='left' alignItems='center' 
             // width='40%'
             >
-                AJAYRAJ A R
+               Developed by <Para pl='1' fontWeight='500'>  Ajayraj A R</Para> 
             </Flex>
             <Flex>
                 <a
