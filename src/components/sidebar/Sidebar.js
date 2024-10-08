@@ -3,11 +3,9 @@ import { Button, Div, Flex, Link, Span } from '../../style/StyledElements';
 import { useState } from 'react';
 import { ReactComponent as Call } from '../../assets/icon/CallPhone.svg';
 import { ReactComponent as Email } from '../../assets/icon/SolidEmail.svg';
-import DropDown from './Dropdown';
 import PdfDownload from '../pdfDownloader';
 import { useTheme } from '../../context/ThemeContext';
 import { FaRegCircleLeft } from "react-icons/fa6";
-import { borderBottom, shadow } from 'styled-system';
 
 function Sidebar({ show, closeSidebar }) {
     const navigate = useNavigate();
