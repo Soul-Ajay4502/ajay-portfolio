@@ -38,8 +38,8 @@ function Sidebar({ show, closeSidebar }) {
             >
                 <Flex
                     position='absolute'
-                    top='-110px'
-                    right='0'
+                    top='-50px'
+                    left='-10px'
                     fontSize='30px'
                     onClick={closeSidebar}
                     borderRadius='80px'
@@ -51,7 +51,11 @@ function Sidebar({ show, closeSidebar }) {
                     <FaRegCircleLeft />
                     {/* &times; */}
                 </Flex>
-                <Link style={{ background: linkBg[theme].bg, borderTopRightRadius: '20px', borderTopLeftRadius: '20px' }} smooth to='tel:+919846027693' onClick={() => { closeSidebar(); contextCurrentSection({ section: 'section1' }) }} {...styles.link}>
+                <Link style={{ background: linkBg[theme].bg,
+                     borderTopRightRadius: '20px', 
+                     borderTopLeftRadius: '20px' ,
+                     marginTop:'10px'
+                     }} smooth to='tel:+919846027693' onClick={() => { closeSidebar(); contextCurrentSection({ section: 'section1' }) }} {...styles.link}>
                     <Flex alignItems='center'>
                         <Call />
                         <Span pl='3'>+91-9846027693</Span>
