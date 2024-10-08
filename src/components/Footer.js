@@ -23,7 +23,7 @@ const Footer = ({ ...rest }) => {
             // width='40%'
             fontSize={{xs:'12px',md:'18px'}}
             >
-                Developed by <Para pl='1' fontWeight='500'>  Ajayraj A R</Para>
+                Developed by <Para pl='1' fontWeight='600'>  Ajayraj</Para>
             </Flex>
             <Flex>
                 <a

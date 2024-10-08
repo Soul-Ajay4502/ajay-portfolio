@@ -53,7 +53,7 @@ const Hero = () => {
         </Flex>
         {/* <HeroTitle>Welcome to Our Platform</HeroTitle>
         <HeroDescription>Discover here and make the best of your experience!</HeroDescription> */}
-        <p className="intro">Hello, I'm Ajayraj A R 👋🏼</p>
+        <p className="intro">Hello, I'm Ajayraj 👋🏼</p>
         <div className="about">
           <div className='about-layout'>
             <div className='about-content'>

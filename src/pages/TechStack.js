@@ -31,7 +31,6 @@ const cardStyle = {
   border: "1px solid #ddd",
   borderRadius: "12px",
   padding: "16px",
-  width: "85%",
   textAlign: "center",
   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
   transition: "transform 0.3s ease-in-out",
@@ -90,11 +89,11 @@ function TechStack() {
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Main Stack</h2>
       <Flex display={{sm:'flex',xs:'none'}} style={flexContainerStyle} pb='6' >
         {techObject.map((tech) => (
-          <TechCard key={tech.id} tech={tech} />
+          <TechCard width='200px' key={tech.id} tech={tech} />
         ))}
       </Flex>
       <Div width='100%' display={{lg:'none',md:'none',sm:'none',xs:'block'}}>
-        <Flex style={flexContainerStyle} pb='6' >
+        <Flex style={flexContainerStyle} >
           <Div 
           width='70%'
            position='relative'>
@@ -118,7 +117,11 @@ function TechStack() {
             >
               {techObject.map((tech) => (
                 <SwiperSlide>
-                  <TechCard height='240px' key={tech.id} tech={tech} />
+                  <TechCard
+                  width= "85%"
+                   height='240px' 
+                   key={tech.id} 
+                   tech={tech} />
                 </SwiperSlide>
 
               ))}
