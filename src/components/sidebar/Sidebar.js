@@ -33,15 +33,22 @@ function Sidebar({ show, closeSidebar }) {
             mt='150px'
             position='relative'
             >
-                <Div 
+                <Flex 
                 position='absolute' 
-                top='-115px' 
-                right='21px'
-                fontSize='44px'
+                top='-110px' 
+                right='25px'
+                fontSize='43px'
                 onClick={closeSidebar}
+                border='2px solid rgba(255, 255, 255, 0.3)'
+                bg='rgba(140, 86, 36, 0.5)'
+                borderRadius='80px'
+                px='10px'
+                height='46px'
+                justifyContent='center'
+                alignItems='center'
                 >
                 &times;
-                </Div>
+                </Flex>
                 <Link smooth to='tel:+919846027693' onClick={() => { closeSidebar(); contextCurrentSection({ section: 'section1' }) }} {...styles.link}>
                     <Flex alignItems='center'>
                         <Call />
