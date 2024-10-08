@@ -31,12 +31,12 @@ function Sidebar({ show, closeSidebar }) {
             }}
         >
             <Div
-                mt='150px'
+                mt='200px'
                 position='relative'
             >
                 <Flex
                     position='absolute'
-                    top='-50px'
+                    top='-70px'
                     left='-10px'
                     fontSize='30px'
                     onClick={closeSidebar}
