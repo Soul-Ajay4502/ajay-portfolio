@@ -1,6 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-import { Button, Div, Flex, Link, Span } from '../../style/StyledElements';
-import { useState } from 'react';
+import { Div, Flex, Link, Span } from '../../style/StyledElements';
 import { ReactComponent as Call } from '../../assets/icon/CallPhone.svg';
 import { ReactComponent as Email } from '../../assets/icon/SolidEmail.svg';
 import PdfDownload from '../pdfDownloader';
@@ -8,8 +6,6 @@ import { useTheme } from '../../context/ThemeContext';
 import { FaRegCircleLeft } from "react-icons/fa6";
 
 function Sidebar({ show, closeSidebar }) {
-    const navigate = useNavigate();
-    const [openedMenu, setOpenedMenu] = useState(null);
     const { contextCurrentSection, themeStyles, theme } = useTheme();
 
     const linkBg = {
@@ -31,7 +27,7 @@ function Sidebar({ show, closeSidebar }) {
             }}
         >
             <Div
-                mt='200px'
+                mt='205px'
                 position='relative'
             >
                 <Flex
