@@ -6,12 +6,15 @@ import "react-multi-carousel/lib/styles.css";
 import amc from '../assets/images/amc.png'
 import timer from '../assets/images/timer.png'
 import alco from '../assets/images/alco.png'
+import exp from '../assets/images/track-expense.jpg'
+import chrch from '../assets/images/chrch.jpg'
+
+
 
 
 function WorkCard({ work }) {
     return (
         <Div style={cardStyle}
-            // width={{lg:'250px',md:'150px',xs:'80px'}}
             mx='2'
             position='relative'
             overflow='hidden'
@@ -21,37 +24,37 @@ function WorkCard({ work }) {
                 alt={work.name}
                 style={imageStyle}
             />
-            <Div style={contentStyle} pb='6'>
-                {/* <Flex justifyContent='right'> */}
-                <Flex
+             <Flex
                     position='absolute'
                     fontSize='12px'
                     bg='#cc92f0'
                     borderRadius='15px'
                     p='2'
                     justifyContent='center'
-                    width='25%'
+                    alignItems='center'
+                    width='29%'
+                    top='37%'
                     right='-15px'
                 >
                     {work.type}
                 </Flex>
-                {/* </Flex> */}
+            <Div style={contentStyle} pt='4' pb='8'>
                 <Flex justifyContent='center' pt='4'>
-
                     <h3>{work.name}</h3>
-
                 </Flex>
                 <Para textAlign='justify' p='4'>{work.desc || "No description provided"}</Para>
-
             </Div>
             <Flex
                 position='absolute'
                 bottom='0'
-                right={work.liveLink ? '15%' : '7%'}
+                left='0'
+                right='15px'
+                justifyContent={work.liveLink ? 'space-around' : 'center'}
+                alignItems='center'
             >
-                {work.liveLink ? <>
-                    <a href={work.git} target="_blank" rel="noopener noreferrer">
-                        <button style={{...buttonStyle,backgroundColor: "#7812b8",}}>
+                {work.git && (
+                    <a href={work.git} target="_blank" rel="noopener noreferrer" style={{width:work.liveLink?'48%':'100%'}}>
+                        <button style={{...buttonStyle, backgroundColor: "#7812b8",width:'100%'}}>
                             <Flex alignItems='center' justifyContent='center'>
                                 <Img
                                     width='20px'
@@ -64,67 +67,49 @@ function WorkCard({ work }) {
                             </Flex>
                         </button>
                     </a>
-                    <a href={work.liveLink} target="_blank" rel="noopener noreferrer">
-                        <button style={{...buttonStyle,backgroundColor: "#007BFF"}}>Live Link</button>
+                )}
+                {work.liveLink && (
+                    <a href={work.liveLink} target="_blank" rel="noopener noreferrer"style={{width:work.git?'48%':'100%'}}>
+                        <button style={{...buttonStyle, backgroundColor: "#007BFF",width:'100%'}}>Live Link</button>
                     </a>
-                </> :
-                    <a href={work.git} target="_blank" rel="noopener noreferrer">
-                        <Button px='100px' style={{...codeButtonStyle, width:'100%',backgroundColor: "#7812b8"}}>
-                            <Flex alignItems='center' justifyContent='center'>
-                                <Img
-                                    width='20px'
-                                    src={`https://skillicons.dev/icons?i=github`}
-                                    alt='github-skillicons'
-                                    className="skill-icon"
-                                    pr='2'
-                                />
-                                <Div>Code</Div>
-                            </Flex>
-                        </Button>
-                    </a>
-                }
+                )}
             </Flex>
         </Div>
     );
 }
+
 const cardStyle = {
     border: "1px solid #ddd",
     borderRadius: "8px",
     padding: "16px",
     textAlign: "center",
     height: '90%',
+    display: 'flex',
+    flexDirection: 'column',
+    // justifyContent: 'space-evenly'
 };
 const imageStyle = {
     width: "100%",
     height: "150px",
     objectFit: "cover",
     borderRadius: "8px",
-    border:'1px solid #fff'
+    border: '1px solid #fff'
 };
-
 const contentStyle = {
-    marginTop: "12px",
+    marginTop: "25px",
 };
-
 const buttonStyle = {
     margin: "8px",
     padding: "8px 16px",
-    // backgroundColor: "#007BFF",
     color: "#fff",
     border: "none",
     borderRadius: "4px",
     cursor: "pointer",
-    height: '75%'
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent:'center'
 };
 
-const codeButtonStyle = {
-    margin: "8px",
-    color: "#fff",
-    border: "none",
-    borderRadius: "4px",
-    cursor: "pointer",
-    height: '75%'
-};
 function Works() {
     const workObject = [
         {
@@ -168,6 +153,24 @@ function Works() {
             git: "https://github.com/Soul-Ajay4502/Amc-Reminder-API",
             img: [amc],
         },
+        {
+            id: "6",
+            type: "Web App",
+            name: "Daily Expense Tracker",
+            desc: "The Daily Expense Tracker helps users efficiently manage and track their day-to-day financial transactions. With intuitive navigation and easy-to-use features, it enables users to add and monitor their income and expenses in real-time.",
+            git: "https://github.com/Soul-Ajay4502/daily-expense-tracker-ai",
+            liveLink: "https://dailyexpensetracker-b5a15.firebaseapp.com/login",
+            img: [exp],
+        },
+        {
+            id: "6",
+            type: "Web App",
+            name: "Church Data Portal",
+            desc: "The Church Data Portal helps church efficiently manage the user details in the church across the world.(Unable to provide codebase)",
+            // git: "https://github.com/Soul-Ajay4502/daily-expense-tracker-ai",
+            liveLink: "https://ssck.in",
+            img: [chrch],
+        },
         // Add more works as needed
     ];
 
@@ -210,7 +213,7 @@ function Works() {
                             }
                         }}
                         infinite
-                        autoPlay
+                        // autoPlay
                         autoPlaySpeed={3000}
                         centerMode
                         slidesToSlide={1}
@@ -231,7 +234,7 @@ function Works() {
                     <Carousel
                         additionalTransfrom={0}
                         arrows
-                        autoPlay
+                        // autoPlay
                         autoPlaySpeed={3000}
                         centerMode={false}
                         className=""

@@ -18,14 +18,15 @@ const Footer = ({ ...rest }) => {
             justifyContent='space-around'
             className="footer-glass-container"
         >
+            <Div>
             <Flex
             // justifyContent='left' alignItems='center' 
             // width='40%'
             fontSize={{xs:'12px',md:'18px'}}
             >
-                Developed by <Para pl='1' fontWeight='600'>  Ajayraj</Para>
+                Developed by <Para px='2' fontWeight='600'>  Ajayraj</Para>
             </Flex>
-            <Flex>
+            <Flex py='4'>
                 <a
                     href='https://github.com/Soul-Ajay4502'
                     style={{
@@ -43,6 +44,7 @@ const Footer = ({ ...rest }) => {
 
 
             </Flex>
+            </Div>
             <Div >
                 <a
                     href='tel:+919633160059'
