@@ -70,7 +70,7 @@ function WorkCard({ work }) {
                 )}
                 {work.liveLink && (
                     <a href={work.liveLink} target="_blank" rel="noopener noreferrer"style={{width:work.git?'48%':'100%'}}>
-                        <button style={{...buttonStyle, backgroundColor: "#007BFF",width:'100%'}}>Live Link</button>
+                        <button style={{...buttonStyle, backgroundColor: "#007BFF",width:'100%',paddingTop:'10px',paddingBottom:'10px'}}>Live Link</button>
                     </a>
                 )}
             </Flex>
