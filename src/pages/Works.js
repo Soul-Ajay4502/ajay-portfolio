@@ -213,7 +213,7 @@ function Works() {
                             }
                         }}
                         infinite
-                        // autoPlay
+                        autoPlay
                         autoPlaySpeed={3000}
                         centerMode
                         slidesToSlide={1}
@@ -234,7 +234,7 @@ function Works() {
                     <Carousel
                         additionalTransfrom={0}
                         arrows
-                        // autoPlay
+                        autoPlay
                         autoPlaySpeed={3000}
                         centerMode={false}
                         className=""
