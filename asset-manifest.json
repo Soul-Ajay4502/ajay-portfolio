@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/ajay-portfolio/static/css/main.4ea332cf.css",
-    "main.js": "/ajay-portfolio/static/js/main.e9d1c483.js",
+    "main.css": "/ajay-portfolio/static/css/main.ede5953b.css",
+    "main.js": "/ajay-portfolio/static/js/main.1bafb4c8.js",
     "static/css/967.f02e67e9.chunk.css": "/ajay-portfolio/static/css/967.f02e67e9.chunk.css",
-    "static/js/967.d838855f.chunk.js": "/ajay-portfolio/static/js/967.d838855f.chunk.js",
+    "static/js/967.62ea8b80.chunk.js": "/ajay-portfolio/static/js/967.62ea8b80.chunk.js",
     "static/js/453.fdabf2da.chunk.js": "/ajay-portfolio/static/js/453.fdabf2da.chunk.js",
     "static/js/692.b2b252f6.chunk.js": "/ajay-portfolio/static/js/692.b2b252f6.chunk.js",
     "static/media/page1.png": "/ajay-portfolio/static/media/page1.4f89f7ced3b61263e1e6.png",
     "static/media/page3.png": "/ajay-portfolio/static/media/page3.2f220a09dcc409ed0d00.png",
     "static/media/page2.png": "/ajay-portfolio/static/media/page2.4fbeded12cbe2c8758bd.png",
     "static/media/page4.png": "/ajay-portfolio/static/media/page4.48f504c78ae211a3148b.png",
+    "static/media/chrch.jpg": "/ajay-portfolio/static/media/chrch.595fd3ac4825bd65d06e.jpg",
     "static/media/PHOTO-AJAYRAJ.jpeg": "/ajay-portfolio/static/media/PHOTO-AJAYRAJ.269db8163b78af3c5ee4.jpeg",
+    "static/media/track-expense.jpg": "/ajay-portfolio/static/media/track-expense.40bc9f7e78a08abc4081.jpg",
     "static/media/alco.png": "/ajay-portfolio/static/media/alco.158fda8b5d121fef6f5d.png",
     "static/media/revicons.eot": "/ajay-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/ajay-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
@@ -42,15 +44,15 @@
     "static/media/mdi_email-open-outline.svg": "/ajay-portfolio/static/media/mdi_email-open-outline.12421c092a1d7248c3418c395961bbb4.svg",
     "static/media/Vector.svg": "/ajay-portfolio/static/media/Vector.9945b4f3eaf26873c3848f98eb210b33.svg",
     "static/media/download.svg": "/ajay-portfolio/static/media/download.df637652babc2c374ea5c800d9132e7b.svg",
-    "main.4ea332cf.css.map": "/ajay-portfolio/static/css/main.4ea332cf.css.map",
-    "main.e9d1c483.js.map": "/ajay-portfolio/static/js/main.e9d1c483.js.map",
+    "main.ede5953b.css.map": "/ajay-portfolio/static/css/main.ede5953b.css.map",
+    "main.1bafb4c8.js.map": "/ajay-portfolio/static/js/main.1bafb4c8.js.map",
     "967.f02e67e9.chunk.css.map": "/ajay-portfolio/static/css/967.f02e67e9.chunk.css.map",
-    "967.d838855f.chunk.js.map": "/ajay-portfolio/static/js/967.d838855f.chunk.js.map",
+    "967.62ea8b80.chunk.js.map": "/ajay-portfolio/static/js/967.62ea8b80.chunk.js.map",
     "453.fdabf2da.chunk.js.map": "/ajay-portfolio/static/js/453.fdabf2da.chunk.js.map",
     "692.b2b252f6.chunk.js.map": "/ajay-portfolio/static/js/692.b2b252f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ea332cf.css",
-    "static/js/main.e9d1c483.js"
+    "static/css/main.ede5953b.css",
+    "static/js/main.1bafb4c8.js"
   ]
 }
